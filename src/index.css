@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --dark-mode:linear-gradient(45deg,rgb(69, 73, 77), rgb(195, 206, 203));
+  --facebook:rgb(52, 127, 240);
+  --instagram:linear-gradient(45deg, rgb(209, 164, 95), rgb(255, 44, 177));
+  --youtube:rgb(216, 27, 27);
+  --font-gray-dark:black;
+  --font-white-dark:black;
+  --font-white-light:#fff;
+  --card-dark:rgb(218, 219, 220);
+  --font-down-black: rgb(247, 90, 90);
+  --font-up-black:hsl(163, 72%, 41%);
+  --background-black: white;
+  --dark-mode:linear-gradient(45deg,rgb(69, 73, 77), rgb(195, 206, 203));
+}
+
+.is-dark-mode{
+  --facebook:rgb(52, 127, 240);
+  --instagram:linear-gradient(45deg, rgb(209, 164, 95), rgb(255, 44, 177));
+  --youtube:rgb(216, 27, 27);
+  --font-gray-dark:rgb(166, 168, 170);
+  --font-white-dark:white;
+  --font-white-light:#fff;
+  --card-dark:rgb(12, 28, 56);
+  --font-down-black: rgb(247, 90, 90);
+  --font-up-black:hsl(163, 72%, 41%);
+  --background-black: black;
+  --dark-mode:linear-gradient(45deg,rgb(12, 76, 119), rgb(10, 170, 130));
+}
+
+.is-light-mode{
+  --facebook:rgb(52, 127, 240);
+  --instagram:linear-gradient(45deg, rgb(209, 164, 95), rgb(255, 44, 177));
+  --youtube:rgb(216, 27, 27);
+  --font-gray-dark:black;
+  --font-white-dark:black;
+  --font-white-light:#fff;
+  --card-dark:rgb(218, 219, 220);
+  --font-down-black: rgb(247, 90, 90);
+  --font-up-black:hsl(163, 72%, 41%);
+  --background-black: white;
+  --dark-mode:linear-gradient(45deg,rgb(69, 73, 77), rgb(195, 206, 203));
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter',sans-serif;
+}
+
+body{
+  background:var(--background-black);
+}
+
+.container{
+  margin: 30px auto;
+  width: 70%;
+  height: 90vh;
+}
+
+.header{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  }
+
+h3,p{
+  margin: 0;
+  padding: 0;
+}
+
+.header h3{
+  font-size: 1.4rem;
+  color:var(--font-gray-dark);
+}
+
+.header p{
+  color: var(--font-gray-dark);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.header-switch{
+  width: 170px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-switch p{
+  color: var(--font-gray-dark);
+  font-size: 12px;
+}
+
+.dark-mode{
+  width: 50px;
+  height: 25px;
+  border-radius: 40px;
+  background: var(--dark-mode);
+}
+
+.dark-mode::before{
+  content: "";
+  display: block;
+  position: relative;
+  width: 19px;
+  height: 19px;
+  border-radius:50%;
+  top: 3px;
+  left: 2px;
+  background: rgb(5, 21, 63);
+  transition: .3s;
+}
+
+.checkbox:checked ~ .dark-mode::before{
+  transform: translateX(28px);
+}
+
+.checkbox{
+  display: none;
+}
+
+
+.body{
+  width: 100%;
+  height: 85%;
+}
+
+.social-media{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin-top: 25px;
+  width: 200px;
+  height: 180px;
+  background:var(--card-dark);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-facebook, .card-twitter{
+  border-top: 4px solid var(--facebook);
+}
+
+.border{
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 4px;
+  background: var(--instagram);
+
+}
+
+.card-youtube{
+  border-top: 4px solid var(--youtube);
+}
+.card-youtube .grow p{
+  color: var(--font-down-black);
+}
+
+.column{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.icon-container{
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.username{
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--font-gray-dark);
+}
+
+.followers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.followers h1{
+  color: var(--font-white-dark);
+  font-size: 2.9rem;
+}
+
+.followers p{
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: var(--font-gray-dark);
+
+}
+
+.grow{
+  display: flex;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.grow img{
+  width: 7px;
+  height: 5px;
+}
+
+.grow p{
+  margin-left: 4px;
+  color: var(--font-up-black);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.overview{
+  color: var(--font-white-dark);
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+.overview-container-cards{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.overview-cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  width: 220px;
+  height: 100px;
+  border-radius:5px;
+  background: var(--card-dark);
+
+}
+
+.first-row, .second-row{
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.first-row p{
+  color: var(--font-dark);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.overview-grow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+}
+
+.overview-grow img{
+  width: 8px;
+  height: 4px;
+}
+
+.overview-grow p{
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.down{
+  color:var(--font-down-black)
+}
+
+.up{
+  color: var(--font-up-black);
+}
+
+@media (max-width:590px){
+  .overview-container-cards, .social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
